@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import gsap from "gsap";
 
-const Designer = () => {
+const Experience = () => {
     const [isHovered, setIsHovered] = useState(false);
-
+    
     useEffect(() => {
         const maskElement = document.querySelector('.mask');
         const sizes = {
@@ -19,7 +19,7 @@ const Designer = () => {
                 duration: 0.5,
                 onUpdate: () => {
                     // document.querySelector('.normal p').style.opacity = 0
-                    maskElement.style.maskPosition = `${events.clientX - size / 2}px ${events.clientY - size / 2}px`;
+                    maskElement.style.maskPosition = `${events.clientX - size/2}px ${events.clientY - size/2}px`;
                 }
             });
         };
@@ -33,23 +33,28 @@ const Designer = () => {
     }, [isHovered]); // Add isHovered as a dependency
 
     return (
+        
         <div id="main">
             <div className="mask">
-                <p
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
+                <p 
+                    onMouseEnter={()=> setIsHovered(true)}
+                    onMouseLeave={()=> setIsHovered(false)}
                     className="hover-text"
                 >
-                    As AI is also there so trying to understand Web3 so that i can place a job in that field and i guess it is more interesting.
+                    Not a decade, actually a university student who is just actively producing cool shit since 2022 and navigating to my carrer.
                 </p>
             </div>
             <div className="normal">
                 <p>
-                    I'm a <span>selectively skilled</span> web developer with strong focus on producing high quality & impactful digital experience.
+                Over <span> a decade </span>of experience in interactive design and working with some of the most talented people in the business.
                 </p>
             </div>
         </div>
+
+        
     );
 };
 
-export default Designer;
+export default Experience;
+
+
