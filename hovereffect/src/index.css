@@ -24,8 +24,23 @@ body {
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background-color: #111;
+  background-color: #000;
   color: #fff;
+
+  &::before{
+    content: "";
+    top: 0rem;
+    left: -1rem;
+    width: 100vw;
+    height: 100%;
+    z-index: 9999;
+    position: fixed;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png);
+    opacity: .1;
+    pointer-events: none;
+    -webkit-animation: noise 1s steps(2) infinite;
+    animation: noise 1s steps(2) infinite
+  }
 }
 #main p {
   font-size: 70px;
