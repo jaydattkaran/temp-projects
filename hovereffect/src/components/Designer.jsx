@@ -8,7 +8,7 @@ const Designer = () => {
         const maskElement = document.querySelector('.mask');
         const sizes = {
             initial: 40,
-            expanded: 400,
+            expanded: 500,
         };
 
         const handleMouseMove = (events) => {
