@@ -9,7 +9,7 @@ const HoverComponent = ({ hoverText, normalText }) => {
         const maskElement = maskRef.current;
         const sizes = {
             initial: 40,
-            expanded: 500,
+            expanded: 450,
         };
 
         const handleMouseMove = (event) => {
